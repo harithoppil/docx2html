@@ -311,8 +311,9 @@ export default class Document extends Converter{
 
 (function(isNode, m){
 	if(!isNode)	return;
+	const dom = new jsdom.JSDOM();
 
-	createDocument=require(m).jsdom
+	createDocument=dom(m).jsdom
 	let window=createDocument().defaultView
 
 	global.btoa=window.btoa
