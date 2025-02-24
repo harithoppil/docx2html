@@ -1,6 +1,6 @@
 import Converter from './converter'
 import JSZip from 'jszip'
-
+import jsdom from 'jsdom'
 var createDocument, CSSStyleDeclaration
 
 export default class Document extends Converter{
